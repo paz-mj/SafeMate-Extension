@@ -1,25 +1,27 @@
-SafeMate Demo - Extensión de Chrome
+SafeMate Demo – Extensión de Chrome
 
-Esta es una extensión de demostración para Google Chrome que simula un producto de ciberseguridad llamado "SafeMate".
+Extensión de demostración para Google Chrome que simula el funcionamiento básico de un producto de ciberseguridad llamado SafeMate.
 
-Funcionalidad
+🚀 Funcionalidades
 
-Añade una opción "Verificar con SafeMate" al menú contextual (clic derecho) sobre cualquier enlace.
+Añade la opción "Verificar con SafeMate" al menú contextual (clic derecho) sobre cualquier enlace.
 
-Al hacer clic, analiza (de forma ficticia) el enlace.
+Al seleccionarla, analiza (de forma simulada) la URL objetivo.
 
-Muestra una notificación visual en la esquina superior derecha de la página indicando el nivel de seguridad del enlace.
+Muestra una notificación visual en la esquina superior derecha indicando el nivel de seguridad del enlace.
 
-Instalación (Modo Desarrollador)
+🛠️ Instalación (Modo Desarrollador)
 
 Clona o descarga este repositorio.
 
-Abre Google Chrome y ve a chrome://extensions.
+Abre Google Chrome y navega a:
+chrome://extensions/
 
-Activa el "Modo de desarrollador" en la esquina superior derecha.
+Activa el Modo de desarrollador (arriba a la derecha).
 
 Haz clic en "Cargar descomprimida".
 
-Selecciona la carpeta completa de este proyecto (safemate-extension).
+Selecciona la carpeta del proyecto:
+safemate-extension/
 
-La extensión aparecerá en tu lista y estará activa.
+La extensión aparecerá en tu lista y quedará activa.
