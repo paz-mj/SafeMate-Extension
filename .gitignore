@@ -1,0 +1,10 @@
+Archivos de empaquetado
+
+*.zip
+*.crx
+*.xml
+*.iml
+Archivos del sistema operativo
+
+.DS_Store
+Thumbs.db

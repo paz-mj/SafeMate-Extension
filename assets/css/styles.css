@@ -1,0 +1,96 @@
+/* * Estilos para el aviso de SafeMate.
+ * Estos estilos están diseñados para tener alta especificidad
+ * y no ser afectados por los estilos de la página anfitriona.
+ */
+.safemate-notice-base {
+    /* Posicionamiento */
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 2147483647; /* Máximo z-index */
+
+    /* Estilo de la caja */
+    background-color: #1E293B; /* Fondo oscuro (como solicitado) */
+    color: #F1F5F9; /* Texto claro */
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+    max-width: 320px;
+    min-width: 300px;
+
+    /* Layout interno */
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    /* Tipografía */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+
+    /* Animación */
+    opacity: 0;
+    transform: translateX(100%); /* Empezar fuera de la pantalla (derecha) */
+    transition: opacity 0.4s cubic-bezier(0.21, 1.02, 0.73, 1), transform 0.4s cubic-bezier(0.21, 1.02, 0.73, 1);
+    box-sizing: border-box;
+}
+
+/* Estado visible (para animación) */
+.safemate-notice-base.safemate-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Contenedor del ícono */
+.safemate-notice-base .safemate-icon {
+    flex-shrink: 0; /* Evita que el ícono se encoja */
+}
+
+/* Estilo del SVG del ícono */
+.safemate-notice-base .safemate-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Contenedor de texto */
+.safemate-notice-base .safemate-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Título (ej. "ENLACE SEGURO") */
+.safemate-notice-base .safemate-text-content strong {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* Mensaje descriptivo */
+.safemate-notice-base .safemate-text-content span {
+    font-size: 13px;
+    color: #CBD5E1; /* Un gris un poco más suave */
+}
+
+/* --- Modificadores de Estado (Colores) --- */
+
+/* Verde (Seguro) */
+.safemate-status-safe .safemate-icon {
+    color: #10B981; /* Color Verde solicitado */
+}
+
+/* Rojo (Peligro) */
+.safemate-status-danger .safemate-icon {
+    color: #EF4444; /* Color Rojo solicitado */
+}
+.safemate-status-danger .safemate-text-content strong {
+    color: #F87171; /* Resaltar el título en rojo también */
+}
+
+
+/* Amarillo/Naranja (Precaución) */
+.safemate-status-caution .safemate-icon {
+    color: #F59E0B; /* Tailwind Amber 500 (Buen amarillo/naranja) */
+}
+.safemate-status-caution .safemate-text-content strong {
+    color: #FCD34D; /* Resaltar el título en amarillo */
+}
